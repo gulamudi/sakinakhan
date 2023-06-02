@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url('AvenirLTStd-Roman.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('AvenirLTStd-Black.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('AvenirLTStd-Book.otf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+body {
+    font-family: 'Avenir';
+}
+
+
+.container {
+    height: calc(var(--vh, 1vh) * 100);
+    max-width: 900px;
+    background: rgb(169,169,169,0.4);
+    margin: 0 auto;
+    padding: 30px 50px;
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 33px;
+    color: #000000;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.singer {
+    width: 539px;
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 90px;
+    color: #000000;
+}
+
+.common {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: end;
+}
+
+#video-section {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#song-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    height: 400px;
+    padding: 4px 8px;
+}
+
+.page-link {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 25px;
+    color: #000000;
+    
+}
+
+.top-link {
+    font-size: 16px;
+    line-height: 33px;
+}
+
+a { text-decoration: none; }
+
+.selected {
+    background-color: #f0f0f0; /* Replace with desired color */
+    padding: 10px;
+}
+
+.song {
+    background: #D9D9D9;
+    mix-blend-mode: multiply;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    color: #000000;
+    padding: 10px;
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: right;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.playlist-heading {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.line {
+    width: 44px;
+    height: 0px;
+    border: 0.25px solid #000000;
+}
+
+.playlist-title {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 25px;
+    color: #000000;
+}
+
+#video-container {
+    padding-top: 24px;
+}
