@@ -2,6 +2,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const pageLinks = document.querySelectorAll('.page-link');
     const topLinks = document.querySelectorAll('.top-link');
 
+    const aboutImage = document.querySelector('#about-image');
+    aboutImage.style.display = 'none';
+
+    const content = document.querySelector('#content');
+    content.style.display = 'none';
+
     topLinks.forEach((link) => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
@@ -24,14 +30,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const page = link.getAttribute('href').substring(1); // Remove the # from the href
     
             const workImage = document.querySelector('#work-image');
+            const aboutImage = document.querySelector('#about-image');
+
             if (page === 'work') {
                 workImage.style.display = 'block';
                 content.style.display = 'none';
                 links.style.display = 'flex';
+                aboutImage.style.display = 'none';
             } else {
                 workImage.style.display = 'none';
                 content.style.display = 'none';
                 links.style.display = 'none';
+                aboutImage.style.display = 'block';
             }
         });
     });
@@ -53,18 +63,31 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const videoContainer = document.querySelector('#video-container');
             const songList = document.querySelector('#song-list');
             const page = link.getAttribute('href').substring(1); // Remove the # from the href
+            const links = document.querySelector('#links');
     
             const workImage = document.querySelector('#work-image');
+            const aboutImage = document.querySelector('#about-image');
+
             workImage.style.display = 'none';
+            aboutImage.style.display = 'none';
             content.style.display = 'flex';
             
+            if (page === 'press') {
+                workImage.style.display = 'none';
+                content.style.display = 'none';
+                links.style.display = 'flex';
+                aboutImage.style.display = 'none';
+            } 
 
             pageTitle.innerText = page.replace('-', ' ').toUpperCase();
     
             videoContainer.innerHTML = `<div style="font-size: 10px;">Some videos are restricted to play as embedded video by the channel. Please click 'Watch on YouTube'.</div><iframe id="video-iframe" width="560" height="315" src="${videoMap[page].default}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
     
             songList.innerHTML = '';
-            Object.keys(videoMap[page].songs).forEach((song) => {
+
+            let currentPlayingSong = null;
+
+            Object.keys(videoMap[page].songs).forEach((song, index) => {
                 const listItem = document.createElement('div');
                 const box = document.createElement('div');
                 box.className = 'box';
@@ -83,7 +106,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
                     // Set the 'src' attribute of the video container to the video URL
                     videoIframe.setAttribute('src', videoUrl);
+
+                    // If a song was playing before, remove the 'song-playing' class from it
+                    if (currentPlayingSong) {
+                        currentPlayingSong.classList.remove('song-playing');
+                    }
+
+                    // Add the 'song-playing' class to the clicked song
+                    listItem.classList.add('song-playing');
+
+                    // Update the current playing song
+                    currentPlayingSong = listItem;
                 });
+
+                // If it's the first song in the list, set it as the current playing song
+                if (index === 0) {
+                    listItem.classList.add('song-playing');
+                    currentPlayingSong = listItem;
+                }
             });
         });
     });
@@ -143,7 +183,7 @@ const videoMap = {
             'Santa baby': 'https://www.youtube.com/embed/3QEZp9-6UMQ',
             'Valentine': 'https://www.youtube.com/embed/Muti3tNxB1U',
             'Landslide': 'https://www.youtube.com/embed/9Yx8J9nfL-8',
-            'Wonderwall': 'https://www.youtube.com/embed/6NOekVsL54',
+            'Wonderwall': 'https://www.youtube.com/embed/-6NOekVsL54',
         }
     },
 };
@@ -161,10 +201,10 @@ const titleMap = {
     'Signature Promo': '<div>Program: Signature Experiences Promo</div><br><div>Sakina Khan is Indian Ocean\'s first choice as their mentee - under the #SignatureExpressions Mentorship Programme.</div>',
     'Rubaru': '<div>Song: Tu Rubaru</div><div>Collaboration: Ujjwal Kashyap</div>',
     'My Soul': '<div>Song: My Soul</div><div>Collaboration: Abhinav Bansal</div>',
-    'Light': '<div>I See The Light</div><div>Collaboration: Daniel B. George</div>',
-    'Jaagi': '<div>Jaagi saari raat</div><div>Collaboration: Rajkumar Dewan</div>',
-    'Sweet pea': '<div>Sweet pea</div><div>Collaboration: Jared Tasho</div><div>Cover: Amos lee</div>',
-    'Garden Grows': '<div>Song: Garden Grows</div><div>Original</div>',
+    'Light': '<div>Song: I See The Light</div><div>Collaboration: Daniel B. George</div>',
+    'Jaagi': '<div>Song: Jaagi saari raat</div><div>Collaboration: Rajkumar Dewan</div>',
+    'Sweet pea': '<div>Song: Sweet pea</div><div>Collaboration: Jared Tasho</div><div>Cover: Amos lee</div>',
+    'Garden Grows': '<div>Song: Garden Grows</div><div>Original Composition</div>',
     'Santa baby': '<div>Song: Santa baby (cover)</div><div>Collaboration: Karan Malhotra</div>',
     'Valentine': '<div>Song: My Funny Valentine</div><div>Cover: Chet Baker</div>',
     'Landslide': '<div>Song: Landslide</div><div>Cover: Fleetwood Mac</div>',
