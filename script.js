@@ -206,6 +206,7 @@ const videoMap = {
             'Rubaru': 'https://www.youtube.com/embed/86nlPZbkmZg',
             'My Soul': 'https://www.youtube.com/embed/Rp6An687HNI',
             'Light': 'https://www.youtube.com/embed/rKk-LfrbAgg',
+            'Papasheks': 'https://www.youtube.com/embed/zQzURSsFv84',
             'Jaagi': 'https://www.youtube.com/embed/vCFnl8oncqg',
             'Sweet pea': 'https://www.youtube.com/embed/uCXbtke6lso',
             'Garden Grows': 'https://www.youtube.com/embed/WXPfiG6WA1U',
@@ -218,11 +219,11 @@ const videoMap = {
 };
 
 const titleMap = {
-    'Phobia': '<div>Song: Roke Na Ruke</div><div>Movie: Phobia</div><div>Music Director: Daniel B. George</div><div>Label: Eros International</div>',
+    'Phobia': '<div>Song: Roke Na Ruke (<a href="https://open.spotify.com/track/651J4ahufxim6iRsJ6O8hr?si=7e6270e8783d4ad3" target="_blank">Spotify</a>)</div><div>Movie: Phobia</div><div>Music Director: Daniel B. George</div><div>Label: Eros International</div>',
     'Hairani': '<div>Song: Hairani</div><div>Movie: Love Shagun</div><div>Music Director: Rishi - Siddharth</div><div>Label: Zee Music Company</div>',
-    'Phir Tu': '<div>Song: Phir Tu</div><div>Movie: The Legend Of Michael Mishra</div><div>Music Director: Abhinav Bansal</div><div>Label: T-Series</div>',
+    'Phir Tu': '<div>Song: Phir Tu (<a href="https://open.spotify.com/track/4oyGI9Q5mHdZZITv40mxzX?si=49cc3d10f588421c" target="_blank">Spotify</a>)</div><div>Movie: The Legend Of Michael Mishra</div><div>Music Director: Abhinav Bansal</div><div>Label: T-Series</div>',
     'Phir Tu Live': '<div>Song: Phir Tu Live</div><div>Movie: The Legend Of Michael Mishra</div><div>Music Director: Abhinav Bansal</div><div>Label: T-Series</div>',
-    'Talaash': '<div>Song: Ek Talaash Hai</div><div>Movie: Mona Darling</div><div>Music Director: Manish J. Tipu</div><div>Label: T-Series</div>',
+    'Talaash': '<div>Song: Ek Talaash Hai (<a href="https://open.spotify.com/track/1cjGD7PBDgRqTc7RzQbJd4?si=93ba9e020b644127" target="_blank">Spotify</a>)</div><div>Movie: Mona Darling</div><div>Music Director: Manish J. Tipu</div><div>Label: T-Series</div>',
     'Kerovit': '<div>Brand: Kerovit</div><div>Music Director: Naozad Patel</div><div>Agency: The Crayons Network</div>',
     'Tata Dark': '<div>Brand: Tata Dark</div><div>Music Director: Naozad Patel</div><div>Agency: The Wired Society</div>',
     'Suzuki': '<div>Brand: Suzuki Burgman</div><div>Music Director: Naozad Patel</div><div>Agency: Asylum Films</div>',
@@ -236,9 +237,10 @@ const titleMap = {
     'Myntra': '<div>Brand: Myntra</div><div>Voiceover</div>',
     'Signature': '<div>Program: Signature Experiences</div><br><div>Sakina Khan is Indian Ocean\'s first choice as their mentee - under the #SignatureExpressions Mentorship Programme.</div>',
     'Signature Promo': '<div>Program: Signature Experiences Promo</div><br><div>Sakina Khan is Indian Ocean\'s first choice as their mentee - under the #SignatureExpressions Mentorship Programme.</div>',
-    'Rubaru': '<div>Song: Tu Rubaru</div><div>Collaboration: Ujjwal Kashyap</div>',
-    'My Soul': '<div>Song: My Soul</div><div>Collaboration: Abhinav Bansal</div>',
+    'Rubaru': '<div>Song: Tu Rubaru (<a href="https://open.spotify.com/track/4hExgsCzJN6jCCTuo5EDiR?si=f24167fa9907430b" target="_blank">Spotify</a>)</div><div>Collaboration: Ujjwal Kashyap</div>',
+    'My Soul': '<div>Song: My Soul (<a href="https://open.spotify.com/track/0ifoAAhjsw58ZPBj2RsDRJ?si=55451c53fb3c4895" target="_blank">Spotify</a>)</div><div>Collaboration: Abhinav Bansal</div>',
     'Light': '<div>Song: I See The Light</div><div>Collaboration: Daniel B. George</div>',
+    'Papasheks': '<div>Song: On My Mind (<a href=https://open.spotify.com/track/3TW9XS7RIgs30MSNJ6NzJw?si=ea24b6c5ce1040ff" target="_blank">Spotify</a>)</div><div>Collaboration: Papasheks</div>',
     'Jaagi': '<div>Song: Jaagi saari raat</div><div>Collaboration: Rajkumar Dewan</div>',
     'Sweet pea': '<div>Song: Sweet pea</div><div>Collaboration: Jared Tasho</div><div>Cover: Amos lee</div>',
     'Garden Grows': '<div>Song: Garden Grows</div><div>Original Composition</div>',
@@ -247,4 +249,6 @@ const titleMap = {
     'Landslide': '<div>Song: Landslide</div><div>Cover: Fleetwood Mac</div>',
     'Wonderwall': '<div>Song: Wonderwall</div><div>Cover: Oasis</div>',
 };
+
+
 
