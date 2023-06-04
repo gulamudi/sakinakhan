@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const songList = document.querySelector('#song-list');
 
     const press = document.querySelector('#press');
+    const imageSources = ['press1.jpg', 'press2.jpg', 'press3.jpg', 'press4.jpg'];
 
     const name = document.querySelector('#name');
 
@@ -82,11 +83,33 @@ document.addEventListener('DOMContentLoaded', (event) => {
             content.style.display = 'flex';
             
             if (page === 'press') {
+                press.innerHTML = '';
                 work.style.display = 'none';
                 content.style.display = 'none';
                 links.style.display = 'flex';
                 about.style.display = 'none';
                 press.style.display = 'flex';
+                press.style.flexDirection = 'column';
+                press.style.alignItems = 'center';
+
+                // Create and add the title
+                const title = document.createElement('h2');
+                title.textContent = 'PRESS';
+                // title.style.margin = 0;
+
+                press.appendChild(title);
+
+                imageSources.forEach((source, index) => {
+                    const newDiv = document.createElement('div');
+                    const newImg = document.createElement('img');
+                  
+                    newImg.src = source;
+                    newImg.alt = `Description of Image ${index + 1}`;
+                    newImg.style.maxWidth = '100%';
+
+                    newDiv.appendChild(newImg);
+                    press.appendChild(newDiv);
+                  });
             } 
 
             pageTitle.innerText = page.replace('-', ' ').toUpperCase();
