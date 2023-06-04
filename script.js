@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const songList = document.querySelector('#song-list');
 
     const press = document.querySelector('#press');
-    const imageSources = ['press1.jpg', 'press2.jpg', 'press3.jpg', 'press4.jpg'];
+    const imageSources = ['press1.JPG', 'press2.JPG', 'press3.JPG', 'press4.JPG'];
 
     const name = document.querySelector('#name');
 
