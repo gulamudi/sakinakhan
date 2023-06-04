@@ -22,6 +22,7 @@
 /* Width */
 ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
 
 /* Track */
@@ -48,7 +49,7 @@ body {
 
 
 .container {
-    height: calc(var(--vh, 1vh) * 100);
+    /* height: calc(var(--vh, 1vh) * 100); */
     max-width: 900px;
     background: rgb(169,169,169,0.4);
     margin: 0 auto;
@@ -56,7 +57,8 @@ body {
     justify-content: start;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    /* gap: 30px; */
+    min-height: calc(100vh - 75px);
 }
 
 .header {
@@ -94,6 +96,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 30px;
 }
 
 .links {
@@ -101,6 +104,7 @@ body {
     flex-direction: column;
     gap: 10px;
     align-items: end;
+    height: 48px;
 }
 
 #video-section {
@@ -197,9 +201,109 @@ a { text-decoration: none; }
 }
 
 #video-container {
-    padding-top: 24px;
+    padding-top: 40px;
 }
 
 .song-playing {
     box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+
+.press {
+    flex-basis: 1;
+}
+
+
+/**/
+
+@media screen and (max-width: 600px) { 
+    .container {
+        padding: 15px 25px;
+        gap: 20px;
+        /* justify-content: space-around; */
+    }
+
+    .common {
+        flex-direction: column;
+        padding-bottom: 0px;
+        gap: 20px;
+    }
+
+    .links {
+        flex-direction: row;
+        align-items: center;
+        overflow-x: auto;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .page-link {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    #video-section {
+        flex-direction: column;
+    }
+
+    .singer {
+        width: 100%;
+        font-size: 36px;
+        line-height: 50px;
+        text-align: start;
+    }
+
+    #video-container, .playlist {
+        width: 100%;
+    }
+
+    /* #song-list {
+        height: 300px;
+    } */
+
+    .playlist-heading {
+        justify-content: center;
+    }
+
+    .nav {
+        gap: 14px;
+    }
+
+    .header {
+        height: 30px;
+    }
+    
+    /* For webkit browsers like Chrome and Safari */
+    .links::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* For Firefox */
+    .links {
+        scrollbar-width: none;
+        -ms-overflow-style: none;  /* IE and Edge */
+    }
+
+    #video-container {
+        padding-top: 0px;
+    }
+
+    h2#page-title {
+        margin: 0;
+    }
+    
+        #song-list {
+          display: flex;
+          flex-direction: row;
+          overflow-x: auto;
+            gap: 10px;
+            width: 100%;
+            padding: 4px 8px;
+            height: 100%;
+        }
+      
+        .box {
+          width: 160px;
+        }
+      
+
 }
