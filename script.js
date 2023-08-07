@@ -174,7 +174,7 @@ const videoMap = {
             'Hairani': 'https://www.youtube.com/embed/i4c4uP04iBk',
             'Phir Tu': 'https://www.youtube.com/embed/AT9NVG4B3Go',
             'Talaash': 'https://www.youtube.com/embed/gbwnbCBwuso',
-            'Phir Tu Live': 'https://www.youtube.com/embed/g10uz7InWJI'
+            // 'Phir Tu Live': 'https://www.youtube.com/embed/g10uz7InWJI'
         }
     },
     'advertisements': {
@@ -222,7 +222,7 @@ const titleMap = {
     'Phobia': '<div>Song: Roke Na Ruke (<a href="https://open.spotify.com/track/651J4ahufxim6iRsJ6O8hr?si=7e6270e8783d4ad3" target="_blank">Spotify</a>)</div><div>Movie: Phobia</div><div>Music Director: Daniel B. George</div><div>Label: Eros International</div>',
     'Hairani': '<div>Song: Hairani</div><div>Movie: Love Shagun</div><div>Music Director: Rishi - Siddharth</div><div>Label: Zee Music Company</div>',
     'Phir Tu': '<div>Song: Phir Tu (<a href="https://open.spotify.com/track/4oyGI9Q5mHdZZITv40mxzX?si=49cc3d10f588421c" target="_blank">Spotify</a>)</div><div>Movie: The Legend Of Michael Mishra</div><div>Music Director: Abhinav Bansal</div><div>Label: T-Series</div>',
-    'Phir Tu Live': '<div>Song: Phir Tu Live</div><div>Movie: The Legend Of Michael Mishra</div><div>Music Director: Abhinav Bansal</div><div>Label: T-Series</div>',
+    // 'Phir Tu Live': '<div>Song: Phir Tu Live</div><div>Movie: The Legend Of Michael Mishra</div><div>Music Director: Abhinav Bansal</div><div>Label: T-Series</div>',
     'Talaash': '<div>Song: Ek Talaash Hai (<a href="https://open.spotify.com/track/1cjGD7PBDgRqTc7RzQbJd4?si=93ba9e020b644127" target="_blank">Spotify</a>)</div><div>Movie: Mona Darling</div><div>Music Director: Manish J. Tipu</div><div>Label: T-Series</div>',
     'Kerovit': '<div>Brand: Kerovit</div><div>Music Director: Naozad Patel</div><div>Agency: The Crayons Network</div>',
     'Tata Dark': '<div>Brand: Tata Dark</div><div>Music Director: Naozad Patel</div><div>Agency: The Wired Society</div>',
